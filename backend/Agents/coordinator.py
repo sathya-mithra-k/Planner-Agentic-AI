@@ -15,8 +15,6 @@ class Coordinator:
         elif any(k in m for k in ["reflect","analyze","review","summary"]):
             return self.reflect(msg)
         else:
-            return -1
-            #self.ask_llm(f"You are a helpful assistant. Please help me with {msg}")
+            return self.ask_llm(f"You are a helpful assistant. Please help me with {msg}")
             
-agent = Coordinator()
-print(agent.run("i want to learn german"))
+
