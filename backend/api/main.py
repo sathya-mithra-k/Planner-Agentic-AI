@@ -1,3 +1,10 @@
-from backend.core.llm_engine import ask_llm
+from fastapi import FastAPI, Query
+from backend.Agents.coordinator import Coordinator
 
-print(ask_llm("Say hello briefly"))
+app = FastAPI()
+c = Coordinator()
+
+@app.get("/query")
+def query(message: str = Query("")):
+    response = c.run(message)
+    return {"reply": response}

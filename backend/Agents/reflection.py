@@ -9,4 +9,3 @@ def analyse(summary):
     m.add("reflection", reflection)
     return reflection
 
-print(analyse("I worked hard, exercised, but didn’t sleep much."))

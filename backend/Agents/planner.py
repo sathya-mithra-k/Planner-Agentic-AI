@@ -8,5 +8,3 @@ def create_plan(goal):
     plan = ask_llm(prompt)
     m.add(goal, plan)
     return plan
-
-print(create_plan("I want to learn Python"))
